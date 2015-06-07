@@ -147,6 +147,7 @@ class Cart implements Hashable
 	/**
 	 * @param Item $i
 	 * @param int|null $quantity
+	 * @param int|null $group
 	 */
 	public function update_item(Item $i, $quantity = null, $group = null)
 	{
