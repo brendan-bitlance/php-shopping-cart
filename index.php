@@ -25,7 +25,7 @@ Tax::register_taxes(array(
 ));
 
 $mars_bar = new Item('MARSBAR', 1.00, 'These are pretty yummy', Tax::fetch_tax('GST'));
-$free_mars_bar = new Item('FREEMARSBAR', 1.00, 'These are pretty yummy', Tax::fetch_tax('GST'), new Discount\Percentage('FREEMARSBAR', 90.00));
+$free_mars_bar = new Item('FREEMARSBAR', 1.00, 'These are pretty yummy', Tax::fetch_tax('GST'), new Discount\Percentage('FREEMARSBAR', 100.00));
 $random_bar = new Item('HEALTHBAR', 1.95, 'These are pretty average', Tax::fetch_tax('VAT'));
 $sweet_bar = new Item('SWEETBAR', 1.25, 'These are tax free');
 $delivery = new Item('DELIVERY', 2.50, 'Delivered to your door', Tax::fetch_tax('VAT'));

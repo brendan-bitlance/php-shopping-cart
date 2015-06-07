@@ -235,15 +235,6 @@ class Cart implements Hashable
 		return $this->totals;
 	}
 
-	public function get_hash()
-	{
-		$hash_subjects = array();
-		foreach ($this->item_lines as $il) {
-			$hash_subjects[] = $il->get_hash();
-		}
-		return md5(implode(Hashable::GLUE, $hash_subjects));
-	}
-
 	/**
 	 * @param ItemLine $il
 	 */
