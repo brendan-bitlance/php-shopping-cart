@@ -52,7 +52,7 @@ class Tax implements Calculatable
 	 * @return Tax
 	 * @throws \OutOfRangeException
 	 */
-	public static function fetch_tax($code)
+	public static function fetch($code)
 	{
 		if (!isset(self::$taxes[$code])) {
 			throw new \OutOfRangeException("Tax code has not been registered: {$code}");
@@ -64,11 +64,11 @@ class Tax implements Calculatable
 	 * @param array $taxes Associative array (code => rate)
 	 * @throws \OverflowException
 	 */
-	public static function register_taxes(array $taxes)
+	public static function register(array $taxes)
 	{
 		foreach ($taxes as $code => $rate) {
 			try {
-				$tax = self::fetch_tax($code);
+				$tax = self::fetch($code);
 				if ($rate != $tax->rate) {
 					throw new \OverflowException("Tax code already registered: {$code}");
 				}

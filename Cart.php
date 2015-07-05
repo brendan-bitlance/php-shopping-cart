@@ -5,7 +5,7 @@ namespace CartUp;
 use CartUp\Storage\AbstractStorage;
 use CartUp\Storage\Session;
 
-class Cart implements Hashable
+class Cart
 {
 	const TOTAL_UNIT = 'unit';
 	const TOTAL_DISCOUNT = 'discount';
